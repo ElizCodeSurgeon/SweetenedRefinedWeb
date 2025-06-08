@@ -78,7 +78,7 @@ a:focus {
 
 /* Hero Section */
 .hero {
-  background: url('https://img.freepik.com/free-photo/medium-shot-people-cleaning-building_23-2150454517.jpg?ga=GA1.1.921970821.1743769475&semt=ais_hybrid&w=740') no-repeat center center/cover;
+  background: url('https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?ga=GA1.1.921970821.1743769475&semt=ais_items_boosted&w=740') no-repeat center center/cover;
   height: 450px;
   color: white;
   display: flex;
@@ -421,55 +421,144 @@ textarea {
 
 
 /* Contact Form */
+.map-container {
+  margin: 2rem 0;
+  border: 2px solid #b7e4c7;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .contact-form {
-  max-width: 600px;
-  margin: 1rem auto 3rem auto;
-  background-color: #e3f0d9;
+  background: #ffffff;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 3px 7px rgba(0,0,0,0.12);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-form label {
   display: block;
-  margin-bottom: 0.3rem;
+  margin-top: 1rem;
   font-weight: 600;
-  color: #264d26;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.7rem;
-  margin-bottom: 1.3rem;
-  border: 1.5px solid #a7c27f;
-  border-radius: 5px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
-  resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #3a7d44;
-  outline: none;
+  background-color: #f9fff9;
 }
 
 .contact-form button {
-  background-color: #3a7d44;
-  color: white;
+  margin-top: 1.5rem;
+  background-color:#264d26;
+  color: #fff;
   border: none;
-  padding: 0.9rem 2rem;
-  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover,
-.contact-form button:focus {
-  background-color: #2b5b2b;
+.contact-form button:hover {
+  background-color:#264d26;
 }
+
+
+
+
+
+/* Base Styles FOR HIRING */
+/* Base Styles */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0fff0;
+  color: #2f4f4f;
+}
+
+a {
+  color: #2a8c5a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Header */
+.header {
+  background-color: #d8f3dc;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #b7e4c7;
+}
+
+.header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #1b4332;
+}
+
+.contact-links p {
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+
+/* Main Content */
+.hiring-main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.info-box {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #95d5b2;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+.info-box h2 {
+  color: #2d6a4f;
+  margin-top: 0;
+}
+
+.info-box ul {
+  padding-left: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* Info Banner Section */
+
+.info-banner h3 {
+  margin-bottom: 10px;
+  color: #1b4332;
+}
+
+.info-banner ul li {
+  margin-bottom: 5px;
+}
+
 
 /* Job Listings */
 .job-listings {
@@ -514,6 +603,13 @@ textarea {
 .job-card button:focus {
   background-color: #2b5b2b;
 }
+
+
+
+
+
+
+
 
 /* Footer */
 footer {

@@ -113,3 +113,85 @@ document.addEventListener("DOMContentLoaded", () => {
     lightboxOverlay.style.display = "none";
   });
 });
+
+
+
+
+
+
+// Scroll to top button
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.onscroll = function () {
+  scrollTopBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+    ? 'block'
+    : 'none';
+};
+
+scrollTopBtn.onclick = function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+// Form validation example for contact or apply forms
+function validateForm(event) {
+  const name = document.querySelector('#name');
+  const email = document.querySelector('#email');
+  const message = document.querySelector('#message');
+  
+  if (!name || !email || !message) return; // Not a contact form
+
+  if (name.value.trim() === '' || email.value.trim() === '' || message.value.trim() === '') {
+    alert('Please fill in all required fields.');
+    event.preventDefault();
+    return false;
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    alert('Please enter a valid email address.');
+    event.preventDefault();
+    return false;
+  }
+
+  alert('Message sent! We’ll get back to you shortly.');
+  return true;
+}
+
+const form = document.querySelector('form');
+if (form) {
+  form.addEventListener('submit', validateForm);
+}
+
+
+
+
+
+// Simple animation on scroll (optional)
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.info-box').forEach(box => {
+  box.classList.add('hidden');
+  observer.observe(box);
+});
+
+
+
+
+
+// JS placeholder for any future functionality
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Hiring page ready.");
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Contact page loaded with map.");
+});
