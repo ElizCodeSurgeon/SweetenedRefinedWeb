@@ -76,6 +76,16 @@ a:focus {
   color: #fff;
 }
 
+
+.logo-img {
+  width: 45px; /* Adjust size as needed */
+  height: 55px;
+  margin-right: 8px;
+}
+
+
+
+
 /* Hero Section */
 .hero {
   background: url('https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?ga=GA1.1.921970821.1743769475&semt=ais_items_boosted&w=740') no-repeat center center/cover;
@@ -148,6 +158,56 @@ p {
   margin-bottom: 1rem;
   font-weight: 400;
 }
+
+
+
+
+
+/* Hide nav links on small screens */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+}
+
+
+
 
 
 
