@@ -1,4 +1,3 @@
- /* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,29 +7,21 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f9fcf7; /* Very light green/white */
-  color: #264d26; /* Dark green */
+  background-color: #d9e9c9;
+  color: #264d26;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Links */
 a {
-  color: #3a7d44; /* Medium green */
+  color: #3a7d44;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover,
-a:focus {
-  color: #1f4d1f; /* Darker green */
-  text-decoration: underline;
-}
-
-/* Navbar */
 .navbar {
-  background-color: #e3f0d9; /* Light green */
+  background-color: #9ccc65;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,7 +44,7 @@ a:focus {
   background: none;
   border: none;
   cursor: pointer;
-  display: none; /* Hide on desktop */
+  display: none; 
   color: #264d26;
 }
 
@@ -72,29 +63,24 @@ a:focus {
 .nav-links li a.active,
 .nav-links li a:hover,
 .nav-links li a:focus {
-  background-color: #9ccc65; /* Medium light green */
-  color: #fff;
+  color:#264d26;
 }
 
 
 .logo-img {
-  width: 45px; /* Adjust size as needed */
+  width: 50px;
   height: 55px;
   margin-right: 8px;
 }
 
 
 
-
-
-/* Base styles 1 */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
   background-color:#d9e9c9;
-;
   position: relative;
 }
 
@@ -114,16 +100,71 @@ a:focus {
   font-weight: 500;
 }
 
-/* Hamburger Button 2*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9e9c9;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 999;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #43a047;
+}
+
+
 .menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
+  color: #2e7d32;
 }
 
-/* Responsive Navigation 3*/
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -133,37 +174,32 @@ a:focus {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
     right: 2rem;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    top: 70px;
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
     display: flex;
   }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
 }
 
 
-
-
-
-
-
-
-/* Hero Section */
 .hero {
   background: url('https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?ga=GA1.1.921970821.1743769475&semt=ais_items_boosted&w=740') no-repeat center center/cover;
-  height: 450px;
+  background-position: center;
+  background-size: cover ;
+  height: 650px;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0 2rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-align: center;
+  padding: 8rem 3rem;
 }
 
 .hero h1 {
@@ -227,9 +263,8 @@ p {
 }
 
 
-
-
-
+   
+    
 /* Hide nav links on small screens */
 .nav-links {
   display: flex;
@@ -275,12 +310,6 @@ p {
 
 
 
-
-
-
-
-
-/* Services Cards */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -320,12 +349,6 @@ p {
 }
 
 
-
-
-
-
-/* About Cards */
-
 .about-section {
   display: flex;
   flex-direction: column;
@@ -341,15 +364,15 @@ p {
   min-height: 300px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  color: whitesmoke;
+  color: white;
 }
 
 .card-story {
-  background-image: url('https://img.freepik.com/free-photo/business-hands-joined-together-teamwork_53876-30575.jpg?ga=GA1.1.921970821.1743769475&semt=ais_items_boosted&w=740'); /* Replace with a relevant image */
+  background: url('https://img.freepik.com/free-photo/business-hands-joined-together-teamwork_53876-30575.jpg?ga=GA1.1.921970821.1743769475&semt=ais_items_boosted&w=740');
 }
 
 .card-mission {
-  background-image: url('https://img.freepik.com/free-photo/businessman-big-office_53876-144319.jpg?ga=GA1.1.921970821.1743769475&semt=ais_items_boosted&w=740'); /* Replace with a relevant image */
+  background: url('https://img.freepik.com/free-photo/businessman-big-office_53876-144319.jpg?ga=GA1.1.921970821.1743769475&semt=ais_items_boosted&w=740');
 }
 
 .overlay {
@@ -384,10 +407,6 @@ p {
 
 
 
-
-
-
-/* CONTACT PAGE 2 */
 section {
       padding: 4rem 2rem;
     }
@@ -506,9 +525,6 @@ textarea {
 }
 
 
-
-
-/* Blog Cards 1 */
 .blog-posts {
   display: grid;
   gap: 2rem;
@@ -541,8 +557,6 @@ textarea {
 .blog-card a {
   font-weight: 600;
 }
-
-
 
 
 
@@ -603,8 +617,6 @@ textarea {
 
 
 /* Base Styles FOR HIRING */
-/* Base Styles */
-
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -624,7 +636,7 @@ a:hover {
 
 /* Header */
 .header {
-  background-color: #d8f3dc;
+  background-color: #e3f0d9;
   padding: 1rem;
   text-align: center;
   border-bottom: 2px solid #b7e4c7;
@@ -668,14 +680,6 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
-/* Info Banner Section */
 
 .info-banner h3 {
   margin-bottom: 10px;
@@ -733,12 +737,6 @@ a:hover {
 
 
 
-
-
-
-
-
-/* Footer */
 footer {
   background-color: #d9e9c9;
   padding: 1.8rem 2rem;

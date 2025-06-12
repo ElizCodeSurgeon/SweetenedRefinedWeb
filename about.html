@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,20 +7,25 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">Sweetened Cleaning</a>
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="hiring.html">Hiring</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="LOGOSWEET.jpg " class="logo-img" alt="Logo" />
+    Sweetened Cleaning
+  </div>
+  <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+  <ul class="nav-links">
+   <ul class="nav-links" id="nav-links">
+ <li><a href="index.html" class="active">Home</a></li>
+  <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="hiring.html">Hiring</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+ 
 
   <main class="main-content">
     <section class="about-content">
@@ -28,12 +33,9 @@
       <p>Your Trusted Partner for Eco-Friendly Cleaning in Kent.</p>
       <p>At Sweetened Cleaning Services, we specialize in delivering exceptional cleaning solutions for homes, offices, commercial spaces, schools, gyms, student accommodations, Airbnbs, post-construction sites, caravans, end-of-tenancy cleans, home moves, libraries, and more.</p>
       <p>We use environmentally safe, non-toxic products that protect your health and the planet—because we believe a clean space should never come at the cost of sustainability.</p>
-   <p>With a strong commitment to quality, health, and customer satisfaction, we’re here to make your space sparkle—responsibly.</p>
+      <p>With a strong commitment to quality, health, and customer satisfaction, we’re here to make your space sparkle—responsibly.</p>
     </section>
   </main>
-
-
-
 
   <section class="about-section">
     <div class="about-card card-story">
@@ -55,10 +57,6 @@
     </div>
   </section>
 
-
-
-
-
   <footer>
     <div class="footer-content">
       <p>Sweetened Cleaning Services &copy; 2025 | Located in Kent, United Kingdom</p>
@@ -70,11 +68,20 @@
         <a href="https://instagram.com/andrewsuloma_1878" target="_blank" rel="noopener">Instagram</a> |
         <a href="https://facebook.com/Sweetenedcleaningservices" target="_blank" rel="noopener">Facebook</a> |
         <a href="https://linkedin.com/in/tamsoni" target="_blank" rel="noopener">LinkedIn</a> |
+        <a href="https://pinterest.com" target="_blank" rel="noopener">Pinterest</a> |
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a> |
         <a href="https://tiktok.com/@elizabethandrews" target="_blank" rel="noopener">TikTok</a>
       </div>
     </div>
   </footer>
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
 
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
   <script src="js/main.js"></script>
 </body>
 </html>

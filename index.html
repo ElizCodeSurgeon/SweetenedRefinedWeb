@@ -2,50 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweetened Cleaning Services - Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Sweetened Cleaning Services</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
+ 
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <img src="LOGOSWEET.jpg" alt="Logo" class="logo-img">
-    <a href="index.html" class="logo"></a>
-    
-    <!-- Hamburger Menu Button -->
-    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-      &#9776; <!-- Hamburger icon -->
-    </button>
-
-    <!-- Navigation Links -->
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="blog.html">Blog</a></li>
+ 
+<nav class="navbar">
+  <div class="logo">
+    <img src="LOGOSWEET.jpg " class="logo-img" alt="Logo" />
+    Sweetened Cleaning
+  </div>
+  <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+  <ul class="nav-links">
+   <ul class="nav-links" id="nav-links">
+ <li><a href="index.html" class="active">Home</a></li>
+  <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
       <li><a href="hiring.html">Hiring</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Eco-Friendly Cleaning in Kent</h1>
-    <h3>We transform your spaces with</h3>
-    <p>precision and care, using eco-conscious,</p>
-    <p>sustainable products that are safe</p>
-    <p>for your family, pets, and the planet.</p>
+                    <h1>Professional, Reliable & Spotless Cleaning in Kent.</h1>
   </section>
 
   <!-- Main Content -->
   <main class="main-content">
     <section class="about-content">
       <h2>🌿 Welcome to Sweetened Cleaning Services</h2>
-      <p>At Sweetened Cleaning Services, we take pride in transforming spaces with precision, care, and a refreshing touch. From cozy homes and busy offices to large commercial properties, our experienced team delivers consistently high-quality results—all while using eco-friendly products that are safe for you, your family, and the environment.</p>
+      <p>
+        Looking for professional, reliable, and spotless cleaning services in Kent? At Sweetened Cleaning Services, we specialise in transforming spaces with a touch of excellence. Whether you manage short-term rentals, run a business, or need your home refreshed, we deliver high-quality cleaning tailored to your needs.
+      </p>
       <p><a href="services.html">Explore our services &raquo;</a></p>
     </section>
   </main>
+
+
+
+ <section>
+    <h2>Why Choose Sweetened?</h2>
+    <ul>
+      <li>Fully tailored cleaning plans</li>
+      <li>Trusted, trained, and professional staff</li>
+      <li>Local, responsive and friendly service</li>
+      <li>Available 7 days a week – including short notice</li>
+    </ul>
+  </section>
+
+
+  
 
   <!-- Footer -->
   <footer>
@@ -57,14 +70,24 @@
       </p>
       <div class="social-links">
         <a href="https://instagram.com/andrewsuloma_1878" target="_blank" rel="noopener">Instagram</a> |
-        <a href="https://facebook.com/Tam Oni" target="_blank" rel="noopener">Facebook</a> |
+        <a href="https://facebook.com/Sweetenedcleaningservices" target="_blank" rel="noopener">Facebook</a> |
         <a href="https://linkedin.com/in/tamsoni" target="_blank" rel="noopener">LinkedIn</a> |
+        <a href="https://pinterest.com" target="_blank" rel="noopener">Pinterest</a> |
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a> |
         <a href="https://tiktok.com/@elizabethandrews" target="_blank" rel="noopener">TikTok</a>
       </div>
     </div>
   </footer>
 
   <!-- JavaScript File -->
+   <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
   <script src="js/main.js"></script>
 </body>
 </html>
