@@ -132,8 +132,8 @@ body {
 }
 
 .logo-img {
-  height: 40px;
-  width: 40px;
+  height: 55px;
+  width: 50px;
   margin-right: 10px;
 }
 
@@ -230,6 +230,12 @@ body {
 .hero button:focus {
   background-color: #2b5b2b;
 }
+
+
+
+
+
+
 
 /* Main content container */
 .main-content {
