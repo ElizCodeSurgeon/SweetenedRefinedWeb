@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Sweetened Cleaning Services</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
 
@@ -12,19 +13,20 @@
 <nav class="navbar">
   <div class="logo">
     <img src="Sweetcleaning_service.png " class="logo-img" alt="Logo" />
-    
   </div>
-  <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-  <ul class="nav-links">
-   <ul class="nav-links" id="nav-links">
- <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="about.html">About</a></li>
+
+  <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="blog.html" class="active">Blog</a></li>
-      <li><a href="hiring.html">Hiring</a></li>
+    <li><a href="hiring.html">Hiring</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
+
  
 
   <main class="main-content">
@@ -74,6 +76,7 @@
       </div>
     </div>
   </footer>
+
 <script>
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
@@ -82,6 +85,7 @@
     navLinks.classList.toggle("active");
   });
 </script>
+
   <script src="js/main.js"></script>
 </body>
 </html>

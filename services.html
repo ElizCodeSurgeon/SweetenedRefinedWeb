@@ -1,10 +1,11 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - Sweetened Cleaning Services</title>
   <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
@@ -12,19 +13,24 @@
 <nav class="navbar">
   <div class="logo">
     <img src="Sweetcleaning_service.png " class="logo-img" alt="Logo" />
-    
   </div>
-  <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-  <ul class="nav-links">
-   <ul class="nav-links" id="nav-links">
- <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="about.html">About</a></li>
+  
+  <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="blog.html" class="active">Blog</a></li>
-      <li><a href="hiring.html">Hiring</a></li>
+    <li><a href="hiring.html">Hiring</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
+
+
+
+
+ 
 
 
   <main class="main-content">
@@ -115,7 +121,6 @@
         <h3>Deep Cleaning</h3>
         <p>We offer deep cleaning services—whether you need routine upkeep or a full deep refresh, we ensure every corner is thoroughly cleaned and sanitized.</p>
       </article>
-
     </section>
   </main>
 
@@ -126,15 +131,14 @@
 
 
 <!-- Booking Form Section -->
-
 <main class="container">
-    <h2 style="text-align:center; margin: 2rem 0;">BOOK A CLEANING</h2>
+    <h2 style="text-align:center; margin: 2rem 0;">BOOK A CLEANER ONLINE</h2>
 <section class="form-section" id="contact">
-  <form>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Your Phone Number" required>
-      <select name="service" required>
+  <form action="https://docs.google.com/spreadsheets/d/134SmVrezBvNxIa3FkxAJPUQ9f4d67ZU0Ms6kMdRLuL8/edit?usp=sharing" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+  <input name="entry.YOUR_FIELD_ID" placeholder="Your Name" required>
+  <input type="email" name="entry.YOUR_FIELD_ID" placeholder="Your Email" required>
+  <input type="tel" name="entry.YOUR_FIELD_ID" placeholder="Your Phone Number" required>
+  <select name="entry.YOUR_FIELD_ID" required>
         <option value="">Cleaning Services</option>
         <option value="domestic">COMMERCIAL CLEANING</option>
         <option value="domestic">STUDENT ACCOMODATION CLEANING</option>
@@ -151,15 +155,15 @@
         <option value="construction">SCHOOL CLEANING SERVICE</option>
         <option value="caravan">GYM CLEANING</option>
          <option value="caravan">SERVICES ACCOMMODATION CLEANING</option>
-      </select>
-      <div style="display: flex; gap: 1rem;">
-<input type="time" name="time" id=" required">
-      </div>
-      <input type="date" name="date" required>
-      <textarea name="message" placeholder="Additional Details (Optional)"></textarea>
-      <button type="submit">Submit Booking</button>
-    </form>
-  </section>
+  </select>
+  <input type="date" name="entry.YOUR_FIELD_ID" required>
+  <input type="time" name="entry.YOUR_FIELD_ID" required>
+  <textarea name="entry.YOUR_FIELD_ID" placeholder="Additional Details (Optional)"></textarea>
+  <button type="submit">Submit Booking</button>
+</form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe> 
+  <p id="form-message" style="display: none; color: green;">Thank you! Your booking was submitted.</p>
+</section>
 </main>
 
 
@@ -187,12 +191,86 @@
       </div>
     </div>
   </footer>
-<script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+
+
+<script>
+  const bookingForm = document.querySelector('.form-section form');
+  const submitBtn = bookingForm.querySelector('button');
+  const btnText = submitBtn.querySelector('.btn-text');
+  const spinner = submitBtn.querySelector('.spinner');
+  const messageBox = document.getElementById('form-message');
+
+  bookingForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Get form values
+    const data = {
+      name: bookingForm.name.value.trim(),
+      email: bookingForm.email.value.trim(),
+      phone: bookingForm.phone.value.trim(),
+      service: bookingForm.service.value,
+      date: bookingForm.date.value,
+      time: bookingForm.time.value,
+      message: bookingForm.message.value.trim()
+    };
+
+    // Validate
+    if (!data.name || !data.email || !data.phone || !data.service || !data.date || !data.time) {
+      messageBox.style.display = 'block';
+      messageBox.style.color = 'red';
+      messageBox.textContent = 'Please fill in all required fields.';
+      return;
+    }
+
+    // Disable button + show spinner
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    spinner.style.display = 'inline-block';
+
+    try {
+      const response = await fetch('https://YOUR-STRAPI-DOMAIN/api/bookings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ data })
+      });
+
+      if (!response.ok) throw new Error('Failed to submit booking.');
+
+      // Show success
+      messageBox.style.display = 'block';
+      messageBox.style.color = 'green';
+      messageBox.textContent = '✅ Thank you! Your booking has been submitted successfully.';
+
+      bookingForm.reset();
+
+    } catch (error) {
+      messageBox.style.display = 'block';
+      messageBox.style.color = 'red';
+      messageBox.textContent = '❌ Oops! Something went wrong. Please try again.';
+      console.error(error);
+    } finally {
+      // Reset button + spinner
+      submitBtn.disabled = false;
+      btnText.style.display = 'inline';
+      spinner.style.display = 'none';
+
+      // Hide message after 5 sec
+      setTimeout(() => {
+        messageBox.style.display = 'none';
+      }, 5000);
+    }
+  });
+</script>
+<script>
+  let submitted = false;
+  document.getElementById('hidden_iframe').addEventListener('load', function() {
+    if (submitted) {
+      document.getElementById('form-message').style.display = 'block';
+      document.querySelector('form').reset();
+    }
   });
 </script>
   <script src="js/main.js"></script>
