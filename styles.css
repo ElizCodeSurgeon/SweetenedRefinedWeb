@@ -48,8 +48,8 @@ a:focus {
 }
 
 .logo-img {
-  width: 50px;
-  height: 55px;
+  width: 200px;
+  height: 70px;
   margin-right: 10px;
 }
 
@@ -58,7 +58,7 @@ a:focus {
   font-size: 2rem;
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: pointer; 
   color: #264d26;
 }
 
