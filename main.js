@@ -239,3 +239,41 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+
+
+
+const typeToServices = {
+  "Commercial Cleaning": ["Office Cleaning", "School Cleaning Service", "Gym Cleaning", "Library Cleaning"],
+  "Student Accommodation Cleaning": ["Deep Cleaning", "End of Tenancy Cleaning"],
+  "Office Cleaning": ["Deep Cleaning", "Standard Cleaning"],
+  "Domestic Cleaning": ["Deep Cleaning", "Moving Home Cleaning", "End of Tenancy Cleaning"],
+  "Deep Cleaning": ["One-off Deep Clean", "Spring Cleaning"],
+  "Airbnb Cleaning": ["Turnover Cleaning", "Deep Cleaning"],
+  "Hotel Cleaning": ["Room Cleaning", "Lobby Cleaning"],
+  "Post Construction Cleaning": ["Debris Removal", "Final Detailed Clean"],
+  "Caravan Cleaning": ["Interior Clean", "Exterior Wash"],
+  "End of Tenancy Cleaning": ["Full Property Clean"],
+  "Moving Home Cleaning": ["Before Move In", "After Move Out"],
+  "Library Cleaning": ["Dusting", "Floor Polishing"],
+  "School Cleaning Service": ["Classroom Cleaning", "Restroom Cleaning"],
+  "Gym Cleaning": ["Equipment Sanitization", "Floor Cleaning"],
+  "Services Accommodation Cleaning": ["Serviced Apartment Cleaning"]
+};
+
+document.getElementById('type').addEventListener('change', function() {
+  const type = this.value;
+  const serviceSelect = document.getElementById('service');
+  serviceSelect.innerHTML = '<option value="">Select service</option>';
+  if (typeToServices[type]) {
+    typeToServices[type].forEach(service => {
+      const option = document.createElement('option');
+      option.value = service;
+      option.textContent = service;
+      serviceSelect.appendChild(option);
+    });
+  }
+});
+
