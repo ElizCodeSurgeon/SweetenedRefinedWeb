@@ -1,74 +1,64 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - Sweetened Cleaning Services</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="js/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Sweetened Cleaning Services</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
-<nav class="navbar">
-  <div class="logo">
-    <img src="Cleaning Logo.png " class="logo-img" alt="Logo" />
-  </div>
 
-  <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-  
-   <ul class="nav-links" id="nav-links">
- <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="blog.html" class="active">Blog</a></li>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Cleaning Logo.png" class="logo-img" alt="Logo" />
+    </div>
+    <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="hiring.html">Hiring</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-   
-  
-<main class="main-content"> 
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38057.36164217608!2d0.5372802770979311!3d51.27870765496733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dfd94eea73df2b%3A0x8e479b3a4077e79f!2sKent%2C%20UK!5e0!3m2!1sen!2suk!4v1717677800000!5m2!1sen!2suk"
-      width="100%" 
-      height="350" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 
+  <!-- Main Content -->
+  <main class="main-content"> 
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38057.36164217608!2d0.5372802770979311!3d51.27870765496733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dfd94eea73df2b%3A0x8e479b3a4077e79f!2sKent%2C%20UK!5e0!3m2!1sen!2suk!4v1717677800000!5m2!1sen!2suk"
+        width="100%" 
+        height="350" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
 
+    <h1>Contact Sweetened Cleaning Services</h1>
+    <p>Have questions or want to book a service? Reach out to us!</p>
 
-  <h1>Contact Sweetened Cleaning Services</h1>
-  <p>Have questions or want to book a service? Reach out to us!</p>
+    <form class="contact-form" action="#" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" />
 
-  <!-- 📬 Contact Form -->
-  <form class="contact-form" action="#" method="POST">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" required placeholder="Your full name" />
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="Your email address" />
 
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" required placeholder="Your email address" />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
 
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required placeholder="Your message here"></textarea>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" required placeholder="Your message here"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
 
-    <button type="submit">Send Message</button>
-  </form>
-</main>
-
-  
-
-
-
-
-
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>Sweetened Cleaning Services &copy; 2025 | Located in Kent, United Kingdom</p>
@@ -83,17 +73,11 @@
         <a href="https://pinterest.com/Sweetened1" target="_blank" rel="noopener">Pinterest</a> |
         <a href="https://twitter.com/Sweetened2025" target="_blank" rel="noopener">Twitter</a> |
         <a href="https://tiktok.com/@sweetened.cleanin" target="_blank" rel="noopener">TikTok</a>
-        </div>
       </div>
+    </div>
   </footer>
-<script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-</script>
-  <script src="js/main.js"></script>
+  <script src="contact.js"></script>
 </body>
 </html>
+ 

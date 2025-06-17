@@ -1,50 +1,42 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Sweetened Cleaning Services</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="js/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | Sweetened Cleaning Services</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-
+<!-- Navbar -->
 <nav class="navbar">
   <div class="logo">
-    <img src="Cleaning Logo.png " class="logo-img" alt="Logo" />
+    <img src="Cleaning Logo.png" class="logo-img" alt="Sweetened Cleaning Services Logo" />
   </div>
-
   <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-
   <ul class="nav-links" id="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="hiring.html">Hiring</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
+<!-- Main Content -->
+<main class="main-content">
+  <h1>Our Cleaning Services</h1>
+  <p>We offer a wide range of eco-friendly cleaning services tailored to your needs:</p>
 
+  <section class="services-grid">
+    <article class="service-card">
+      <img src="https://img.freepik.com/free-photo/chambermaid-cleaning-hotel-room_23-2148095306.jpg" alt="Airbnb Cleaning" />
+      <h3>Airbnb Cleaning</h3>
+      <p>Fast and thorough cleaning for short-term rentals, ensuring your guests arrive to spotless spaces.</p>
+    </article>
 
-
- 
-
-
-  <main class="main-content">
-    <h1>Our Cleaning Services</h1>
-    <p>We offer a wide range of eco-friendly cleaning services tailored to your needs:</p>
-
-    <section class="services-grid">
-      <article class="service-card">
-        <img src="https://img.freepik.com/free-photo/chambermaid-cleaning-hotel-room_23-2148095306.jpg?ga=GA1.1.921970821.1743769475&semt=ais_hybrid&w=740" alt="Airbnb Cleaning" />
-        <h3>Airbnb Cleaning</h3>
-        <p>Fast and thorough cleaning for short-term rentals, ensuring your guests arrive to spotless spaces.</p>
-      </article>
-
-      <article class="service-card">
+   <article class="service-card">
         <img src="https://img.freepik.com/free-photo/chambermaid-preparing-hotel-room_23-2148095225.jpg?ga=GA1.1.921970821.1743769475&semt=ais_hybrid&w=740" alt="Hotel Cleaning" />
         <h3>Hotel Cleaning</h3>
         <p>Professional hotel cleaning to maintain hygiene and comfort for your guests around the clock.</p>
@@ -121,11 +113,11 @@
         <h3>Deep Cleaning</h3>
         <p>We offer deep cleaning services—whether you need routine upkeep or a full deep refresh, we ensure every corner is thoroughly cleaned and sanitized.</p>
       </article>
-    </section>
-  </main>
+  </section>
+</main>
 
-
-
+<!-- Booking Form -->
+<section class="booking-section">
   <div class="container">
     <div class="steps">
       <div class="step active">1 SCHEDULE</div>
@@ -139,17 +131,17 @@
     <form id="bookingForm" method="POST" action="process_booking.php">
       <div class="form-group">
         <label>Date:</label>
-        <input type="date" name="date" id="date" required>
+        <input type="date" name="date" required>
       </div>
 
       <div class="form-group">
-      <label>Time:</label>
-<input type="time" name="time" id="time" required>
+        <label>Time:</label>
+        <input type="time" name="time" required>
       </div>
 
       <div class="form-group">
         <label>Type:</label>
-        <select name="type" id="type" required>
+        <select name="type" required>
           <option value="">Select type</option>
           <option value="Commercial Cleaning">Commercial Cleaning</option>
           <option value="Student Accommodation Cleaning">Student Accommodation Cleaning</option>
@@ -178,14 +170,16 @@
         </select>
       </div>
 
+
+      
       <h3>Booking Details</h3>
       <div class="form-group">
-        <input type="text" name="fullname" id="fullname" placeholder="Full name" required>
-        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="text" name="fullname" placeholder="Full name" required>
+        <input type="email" name="email" placeholder="Email" required>
       </div>
       <div class="form-group">
-        <input type="text" name="fulladdress" id="fulladdress" placeholder="Full address" required>
-        <input type="text" name="phone" id="phone" placeholder="Phone number" required>
+        <input type="text" name="fulladdress" placeholder="Full address" required>
+        <input type="text" name="phone" placeholder="Phone number" required>
       </div>
 
       <p class="note">Availability may vary by area. We only cover areas inside Kent.</p>
@@ -193,36 +187,27 @@
       <button type="submit">Submit</button>
     </form>
   </div>
+</section>
 
-
-
-      
-  
-
-
-
-  <footer>
-    <div class="footer-content">
-      <p>Sweetened Cleaning Services &copy; 2025 | Located in Kent, United Kingdom</p>
-      <p>
-        Email: <a href="mailto:sweetenedcleaningservices@gmail.com">sweetenedcleaningservices@gmail.com</a> |
-        WhatsApp: <a href="https://wa.me/447916735336" target="_blank" rel="noopener">+44 7916 735336</a>
-      </p>
-      <div class="social-links">
-        <a href="https://instagram.com/sweetened.cleaning" target="_blank" rel="noopener">Instagram</a> |
-        <a href="https://facebook.com/Sweetenedcleaningservices" target="_blank" rel="noopener">Facebook</a> |
-        <a href="https://linkedin.com/in/tamsoni" target="_blank" rel="noopener">LinkedIn</a> |
-        <a href="https://pinterest.com/Sweetened1" target="_blank" rel="noopener">Pinterest</a> |
-        <a href="https://twitter.com/Sweetened2025" target="_blank" rel="noopener">Twitter</a> |
-        <a href="https://tiktok.com/@sweetened.cleanin" target="_blank" rel="noopener">TikTok</a>
-      </div>
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <p>Sweetened Cleaning Services &copy; 2025 | Located in Kent, United Kingdom</p>
+    <p>
+      Email: <a href="mailto:sweetenedcleaningservices@gmail.com">sweetenedcleaningservices@gmail.com</a> |
+      WhatsApp: <a href="https://wa.me/447916735336" target="_blank">+44 7916 735336</a>
+    </p>
+    <div class="social-links">
+      <a href="https://instagram.com/sweetened.cleaning" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/Sweetenedcleaningservices" target="_blank">Facebook</a> |
+      <a href="https://linkedin.com/in/tamsoni" target="_blank">LinkedIn</a> |
+      <a href="https://pinterest.com/Sweetened1" target="_blank">Pinterest</a> |
+      <a href="https://twitter.com/Sweetened2025" target="_blank">Twitter</a> |
+      <a href="https://tiktok.com/@sweetened.cleanin" target="_blank">TikTok</a>
     </div>
-  </footer>
+  </div>
+</footer>
 
-
-
-
-  
-  <script src="js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -2,32 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog - Sweetened Cleaning Services</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
+
+  <!-- Navbar -->
   <nav class="navbar">
-  <div class="logo">
-    <img src="Cleaning Logo.png " class="logo-img" alt="Logo" />
-  </div>
-
-  <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-  
-   <ul class="nav-links" id="nav-links">
- <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="blog.html" class="active">Blog</a></li>
+    <div class="logo">
+      <img src="Cleaning Logo.png" class="logo-img" alt="Logo" />
+    </div>
+    <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
       <li><a href="hiring.html">Hiring</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-
-
+  <!-- Blog Main Content -->
   <main class="main-content">
     <h1>Cleaning Tips and News</h1>
 
@@ -55,6 +52,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>Sweetened Cleaning Services &copy; 2025 | Located in Kent, United Kingdom</p>
@@ -72,14 +70,7 @@
       </div>
     </div>
   </footer>
-<script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-</script>
-  <script src="js/main.js"></script>
+  <script src="blog.js"></script>
 </body>
 </html>
