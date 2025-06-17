@@ -25,37 +25,56 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="main-content"> 
     <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38057.36164217608!2d0.5372802770979311!3d51.27870765496733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dfd94eea73df2b%3A0x8e479b3a4077e79f!2sKent%2C%20UK!5e0!3m2!1sen!2suk!4v1717677800000!5m2!1sen!2suk"
-        width="100%" 
-        height="350" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d389401.2474459828!2d0.3746584705866352!3d51.278707287823204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df32ae407f2a91%3A0x44f157ad8b70eea0!2sKent%2C%20UK!5e0!3m2!1sen!2sng!4v1718646874821!5m2!1sen!2sng" 
+      width="100%" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 
-    <h1>Contact Sweetened Cleaning Services</h1>
-    <p>Have questions or want to book a service? Reach out to us!</p>
 
-    <form class="contact-form" action="#" method="POST">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required placeholder="Your full name" />
+  
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required placeholder="Your email address" />
+    
+  <div class="form-container">
+    <h2>GET A FREE CALL BACK</h2>
+    <form id="callbackForm">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="fulladdress" placeholder="Full address" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <select name="service" required>
+        <option value="">-- Select service --</option>
+          <option value="Commercial Cleaning">Commercial Cleaning</option>
+          <option value="Student Accommodation Cleaning">Student Accommodation Cleaning</option>
+          <option value="Office Cleaning">Office Cleaning</option>
+          <option value="Domestic Cleaning">Domestic Cleaning</option>
+          <option value="Deep Cleaning">Deep Cleaning</option>
+          <option value="Airbnb Cleaning">Airbnb Cleaning</option>
+          <option value="Hotel Cleaning">Hotel Cleaning</option>
+          <option value="Post Construction Cleaning">Post Construction Cleaning</option>
+          <option value="Caravan Cleaning">Caravan Cleaning</option>
+          <option value="End of Tenancy Cleaning">End of Tenancy Cleaning</option>
+          <option value="Moving Home Cleaning">Moving Home Cleaning</option>
+          <option value="Library Cleaning">Library Cleaning</option>
+          <option value="School Cleaning Service">School Cleaning Service</option>
+          <option value="Gym Cleaning">Gym Cleaning</option>
+          <option value="Services Accommodation Cleaning">Services Accommodation Cleaning</option>
+      </select>
+      <textarea name="message" placeholder="Message"></textarea>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required placeholder="Your message here"></textarea>
-
-      <button type="submit">Send Message</button>
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required>
+        I agree that Sweetened Cleaning Services can use my details to contact me in regards to my enquiry and for future promotions. For full details of our Privacy Policy click <a href="#" target="_blank">here</a>. You can contact us regarding any issues with your personal data.
+      </label>
+      <button type="submit">Submit</button>
     </form>
+  </div>
   </main>
 
   <!-- Footer -->

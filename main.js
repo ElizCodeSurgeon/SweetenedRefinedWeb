@@ -277,3 +277,15 @@ document.getElementById('type').addEventListener('change', function() {
   }
 });
 
+
+// Basic submit handler
+document.getElementById('callbackForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you! Your request has been submitted.');
+  this.reset();
+});
+
+
+
+// Optional: any map interactions can go here
+console.log("Kent map loaded successfully.");
