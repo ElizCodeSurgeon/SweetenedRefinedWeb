@@ -1,4 +1,4 @@
- // index.js
+// about.js
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.classList.toggle("active");
   });
 
-  // Optional: Close the menu when a link is clicked
+  // Optional: Close the menu when a link is clicked (good for mobile UX)
   navLinks.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-
-
 
 
 
