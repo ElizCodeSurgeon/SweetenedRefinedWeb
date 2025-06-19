@@ -572,30 +572,188 @@ form button {
 
 
 
+/* Styles for Terms & Conditions Page */
+
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: #f0fff0;
+}
+
+h1, h2 {
+  color: #5dbb63;
+}
 
 footer {
-  background-color: #d9e9c9;
-  padding: 1.8rem 2rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #1f4d1f;
-  flex-shrink: 0;
+  padding: 20px;
+  background: #5dbb63;
+  color: #f0fff0;
 }
 
-.footer-content p {
-  margin-bottom: 0.5rem;
+
+
+/* Basic styling for the Disclaimer page */
+
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: #f0fff0;
 }
 
-.social-links a {
-  margin: 0 0.4rem;
-  color: #1f4d1f;
-  font-weight: 600;
+h1, h2 {
+  color: #5dbb63;
 }
 
-.social-links a:hover,
-.social-links a:focus {
-  color: #1f4d1f;
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #5dbb63;
+  color: #f0fff0;
+}
+
+
+
+
+/* Basic styling for the Privacy Policy page */
+
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: #f0fff0;
+}
+
+h1, h2 {
+  color: #2e7d32;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2e7d32;
+  color: #f0fff0;
+}
+
+a {
+  color: #2e7d32;
   text-decoration: underline;
+}
+
+
+
+/* Basic styling for the Cookies Policy page and banner */
+
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: #f0fff0;
+}
+
+h1, h2, h3 {
+  color: #2e7d32;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2e7d32;
+  color: #f0fff0;
+}
+
+a {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+#cookieConsent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #f0fff0;
+  padding: 15px 20px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 9999;
+}
+
+#cookieConsent p {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+#cookieConsent button {
+  background: #2e7d32;
+  color: #f0fff0;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#cookieConsent a {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Footer Styles */
+
+.footer {
+background-color: #d9e9c9; 
+color: #2e7d32;
+text-align: center;
+padding: 30px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-nav,
+.footer-social {
+  margin: 15px 0;
+}
+
+.footer-nav a,
+.footer-social a {
+  display: inline-block;
+  margin: 5px 10px;
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-social a:hover {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 /* Responsive styles */
