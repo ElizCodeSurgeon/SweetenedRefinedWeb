@@ -1,4 +1,4 @@
- <?php
+<?php
 // === process_booking.php ===
 
 // Enable error reporting (for debugging only; remove in production)
@@ -48,5 +48,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Invalid request method.";
 }
 ?>
-
-
