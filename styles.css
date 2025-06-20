@@ -48,11 +48,15 @@ a {
   margin-right: 10px;
 }
 
+
+/* Hamburger Button and every other things remains*/
 #menu-toggle {
-  display: none;
+  display: none;/* hidden by default; shown only on mobile */
   font-size: 1.6rem;
-  background: none;
-  border: none;
+  background-color: #2e7d32;/* my desired button color */
+   padding: 10px 12px;
+  font-size: 22px;
+   border-radius: 5px;
   cursor: pointer;
   color: #264d26;
 }
